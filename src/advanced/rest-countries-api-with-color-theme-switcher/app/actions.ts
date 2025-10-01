@@ -7,7 +7,8 @@ export async function getCountries({
   readonly name: string;
   readonly region: string;
 }): Promise<Country[]> {
-  let url = "https://restcountries.com/v3.1/all";
+  let url =
+    "https://restcountries.com/v3.1/all?fields=name,region,flags,population,capital,cca2";
 
   const res = await fetch(url);
 
